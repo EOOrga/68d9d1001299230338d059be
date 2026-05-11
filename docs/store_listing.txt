@@ -1,0 +1,13 @@
+App name
+CHEVALLIER LE PAGE MARIE FRANC
+
+Short description
+Manage facility bookings, assets, containers, and payroll notes offline.
+
+Full description
+CHEVALLIER LE PAGE MARIE FRANC gives daily operations teams a focused Android workspace for local business task tracking. Create and review facility bookings, asset records, container checkpoints, and payroll report notes without account setup or cloud sync.
+
+The app organizes active work, review items, due windows, and completion status so managers can keep a clear local record of site activity throughout the day.
+
+Category
+Business

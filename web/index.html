@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHEVALLIER LE PAGE MARIE FRANC</title>
+  <meta name="description" content="Offline operations workspace for facility booking, asset management, container tracking, and payroll report notes.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.png">
+  <style>
+    :root {
+      --ink: #071a34;
+      --steel: #5f6878;
+      --paper: #f4f7fa;
+      --line: #dde4eb;
+      --teal: #0d7c73;
+      --silver: #e7eaee;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px clamp(18px, 4vw, 56px);
+      color: var(--white);
+      background: rgba(7, 26, 52, 0.74);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: end;
+      padding: 120px clamp(18px, 5vw, 72px) 72px;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(7, 26, 52, 0.92), rgba(7, 26, 52, 0.52), rgba(7, 26, 52, 0.16)),
+        url("featured.png") center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.4rem, 7vw, 5.9rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 22px 0 30px;
+      font-size: clamp(1rem, 2vw, 1.24rem);
+      color: var(--silver);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    main {
+      padding-bottom: 56px;
+    }
+
+    section {
+      padding: 54px clamp(18px, 5vw, 72px);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 34px;
+      align-items: start;
+      background: var(--white);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--steel);
+      font-size: 1.08rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tile {
+      min-height: 168px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .tile strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .tile p {
+      margin: 0;
+      color: var(--steel);
+    }
+
+    .workflow {
+      background: var(--paper);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      padding: 22px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--ink);
+      font-weight: 900;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .contact p {
+      max-width: 680px;
+      color: var(--silver);
+    }
+
+    footer {
+      padding: 20px clamp(18px, 5vw, 72px);
+      color: var(--steel);
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+
+      .intro,
+      .grid,
+      .steps,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top" aria-label="CHEVALLIER LE PAGE MARIE FRANC">
+      <img src="icons/Icon-192.png" alt="">
+      <span>CHEVALLIER LE PAGE MARIE FRANC</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#operations">Operations</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>CHEVALLIER LE PAGE MARIE FRANC</h1>
+        <p>Offline Android operations tracking for facility bookings, asset records, container checkpoints, and payroll report notes.</p>
+        <a class="button" href="#operations">View operations scope</a>
+      </div>
+    </section>
+
+    <section class="intro" id="operations">
+      <div>
+        <h2>Daily business records without account setup.</h2>
+        <p class="lead">The Android app keeps routine site tasks organized in local storage so teams can review active work, due windows, exceptions, and completion status from one focused workspace.</p>
+      </div>
+      <div class="grid">
+        <article class="tile">
+          <strong>Facility booking</strong>
+          <p>Reserve rooms, loading bays, and shared resources with owner and due-window notes.</p>
+        </article>
+        <article class="tile">
+          <strong>Asset management</strong>
+          <p>Track inspections, assignments, counts, and service review items.</p>
+        </article>
+        <article class="tile">
+          <strong>Container tracking</strong>
+          <p>Maintain local checkpoints for seals, carriers, handoffs, and release status.</p>
+        </article>
+        <article class="tile">
+          <strong>Payroll reports</strong>
+          <p>Record exceptions and review notes before weekly payroll processing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+      <h2>Built for a compact operations rhythm.</h2>
+      <div class="steps">
+        <article class="step">
+          <span>1</span>
+          <h3>Create records</h3>
+          <p>Add the type, owner, notes, count, status, and due window for each operating item.</p>
+        </article>
+        <article class="step">
+          <span>2</span>
+          <h3>Review status</h3>
+          <p>Use the overview and reports screens to see active work, review items, and completion.</p>
+        </article>
+        <article class="step">
+          <span>3</span>
+          <h3>Keep it local</h3>
+          <p>Records stay on the Android device. The app uses no account, cloud sync, or analytics service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div>
+        <h2>Provider</h2>
+        <p>CHEVALLIER LE PAGE MARIE FRANCOISE NADINE JEANNINE provides the Android app as a local operations productivity tool.</p>
+      </div>
+      <a class="button" href="mailto:contact@chevallierlepage.fr">Contact support</a>
+    </section>
+  </main>
+
+  <footer>
+    CHEVALLIER LE PAGE MARIE FRANC. Local-first Android operations workspace.
+  </footer>
+</body>
+</html>
