@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.chevallierlepage.mariefrancops": {
+      "title": "CHEVALLIER LE PAGE MARIE FRANC",
+      "short_description": "Manage facility bookings, assets, containers, and payroll notes offline.",
+      "full_description": "CHEVALLIER LE PAGE MARIE FRANC gives daily operations teams a focused Android workspace for local business task tracking. Create and review facility bookings, asset records, container checkpoints, and payroll report notes without account setup or cloud sync.\n\nThe app organizes active work, review items, due windows, and completion status so managers can keep a clear local record of site activity throughout the day.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:21:19.024686+00:00"
+    }
+  }
+}
