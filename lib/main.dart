@@ -31,9 +31,9 @@ class OperationsApp extends StatelessWidget {
 }
 
 ThemeData buildTheme() {
-  const primary = Color(0xFF071A34);
-  const secondary = Color(0xFF5F6878);
-  const accent = Color(0xFF0D7C73);
+  const primary = Color(0xFF1FFFC3);
+  const secondary = Color(0xFF1FCBFF);
+  const accent = Color(0xFF1F5BFF);
   const surface = Color(0xFFF4F7FA);
 
   final scheme =
@@ -223,7 +223,7 @@ class OperationsRepository {
       OpsRecord(
         id: 'starter-facility',
         type: WorkType.facility,
-        title: 'Morning loading bay reservation',
+        title: 'CHEVALLIER LE PAGE MARIE FRANC',
         owner: 'Site operations',
         detail: 'Reserve bay 2 for supplier intake and pallet staging.',
         status: 'Active',
