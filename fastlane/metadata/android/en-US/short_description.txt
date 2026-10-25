@@ -1,0 +1,1 @@
+Manage facility bookings, assets, containers, and payroll notes offline.
